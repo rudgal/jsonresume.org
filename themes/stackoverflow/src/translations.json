@@ -4,9 +4,10 @@
   },
   "de": {
     "translation": {
-      "Skills": "Fähigkeiten",
+      "Current": "Aktuell",
+      "Skills": "Skills",
       "Interests": "Interessen",
-      "Work Experience": "Arbeitserfahrung",
+      "Work Experience": "Berufserfahrung",
       "Certificates": "Zertifikate",
       "Projects": "Projekte",
       "Volunteer": "Engagement",
