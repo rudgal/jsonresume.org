@@ -21,7 +21,7 @@ export const Languages = withTranslation()(
                       className={`level fluency ${language.fluency.toLowerCase()}`}
                     >
                       <em>{language.fluency}</em>
-                      <div className="bar"></div>
+                      {/*<div className="bar"></div>*/}
                     </div>
                   )}
                 </div>
