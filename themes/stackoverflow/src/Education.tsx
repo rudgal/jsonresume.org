@@ -34,7 +34,7 @@ export const Education = withTranslation()(
                       - {formatDate(edu.endDate)}
                     </span>
                   ) : (
-                    <span className="endDate"> - Current</span>
+                    <span className="endDate"> - {t('Current')}</span>
                   )}
                 </div>
                 <div className="header-left">

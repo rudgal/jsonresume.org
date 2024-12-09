@@ -35,7 +35,7 @@ export const Projects = withTranslation()(
                             - {MY(project.endDate, i18n.language)}
                           </span>
                         ) : (
-                          <span className="endDate">- Current</span>
+                          <span className="endDate">- {t('Current')}</span>
                         )}
                       </div>
                       {project.name && (

@@ -36,7 +36,7 @@ export const Volunteer = withTranslation()(
                           - {new Date(item.endDate).toLocaleDateString()}
                         </span>
                       ) : (
-                        <span className="endDate"> - Current</span>
+                        <span className="endDate"> - {t('Current')}</span>
                       )}
                     </div>
                     <div className="header-left">
