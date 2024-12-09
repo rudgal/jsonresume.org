@@ -229,6 +229,8 @@ export interface Reference {
    * e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing.
    */
   reference?: string;
+
+  position?: string;
 }
 
 export interface Work {

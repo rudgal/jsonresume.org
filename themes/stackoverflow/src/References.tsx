@@ -14,9 +14,18 @@ export const References = withTranslation()(
               {reference.reference && (
                 <blockquote className="reference">
                   &#8220;{reference.reference}&#8221;
-                  {reference.name && (
-                    <div className="name">{reference.name}</div>
-                  )}
+                  <div>
+                    {reference.name && (
+                      <>
+                        <span className="name">{reference.name}</span>
+                        {reference.position && (
+                          <span className="institution">
+                            {reference.position}
+                          </span>
+                        )}
+                      </>
+                    )}
+                  </div>
                 </blockquote>
               )}
             </div>
