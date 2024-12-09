@@ -9,8 +9,17 @@ export default defineConfig({
     target: 'node20',
     outDir: './dist',
     rollupOptions: {
-      input: './src/index.ts',
+      input: {
+        de: './src/de/index.ts',
+        en: './src/en/index.ts',
+      },
       external: ['react', 'react-dom/server'],
+      output: {
+        format: 'cjs',
+        entryFileNames: ({ name }) => {
+          return ['de', 'en'].includes(name) ? '[name]/index.js' : '[name].js';
+        },
+      },
     },
   },
   resolve: {

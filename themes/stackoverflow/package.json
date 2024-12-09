@@ -39,7 +39,6 @@
     "styled-components": "^5.3.11",
     "web-vitals": "^2.1.0"
   },
-  "type": "module",
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@repo/eslint-config-custom": "workspace:*",

@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "./dist",
     "noEmit": false,
-    "module": "commonjs"
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "noEmitOnError": false
   },
   "include": ["src/*/index.ts"]
 }
