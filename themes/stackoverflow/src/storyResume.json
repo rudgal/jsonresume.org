@@ -57,6 +57,7 @@
   "projects": [
     {
       "name": "Cat Chat",
+      "entity": "Entity A",
       "startDate": "2019-06",
       "endDate": "2019-07",
       "url": "https://example.com/cat-chat",
@@ -69,6 +70,7 @@
     },
     {
       "name": "Nacho Tracker",
+      "entity": "Entity B",
       "startDate": "2020-05",
       "endDate": "2020-07",
       "url": "https://example.com/nacho-tracker",
@@ -81,6 +83,7 @@
     },
     {
       "name": "Reverse Alarm Clock",
+      "entity": "Entity C",
       "startDate": "2021-01",
       "endDate": "2021-02",
       "url": "https://example.com/reverse-alarm-clock",
