@@ -91,7 +91,11 @@ export const Basics: React.FC<BasicsProps> = (props) => {
   return (
     <>
       <header id="header" className="clear">
-        {image && <img className="image" src={image} alt="{{name}}" />}
+        {image && (
+          <div className="image-container">
+            <img className="image" src={image} alt="{{name}}" />
+          </div>
+        )}
         <div className="middle">
           <h1 className="name">{name}</h1>
           <h2 className="label">{label}</h2>

@@ -248,10 +248,25 @@ section .location {
   font-weight: 300;
 }
 
-#header .image {
-  width: 11em;
+#header .image-container {
   float: right;
-  border-radius: 4px;
+  overflow: hidden;
+  width: 11em;
+  aspect-ratio: 1/1;
+  border: 2px solid #f2f8fe;
+  border-radius: 99999px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#header .image {
+  width: 100%;
+  height: auto;
+  /*width: 11em;*/
+  /*float: right;*/
+  /*border-radius: 4px;*/
 }
 
 .main-summary {
