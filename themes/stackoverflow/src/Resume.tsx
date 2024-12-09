@@ -17,8 +17,8 @@ export const Resume: React.FC<ResumeProps> = (resume) => (
   <div id="resume">
     <Basics {...resume.basics} />
     {resume.skills && <Skills skills={resume.skills} />}
-    {resume.work && <Work work={resume.work} />}
     {resume.projects && <Projects projects={resume.projects} />}
+    {resume.work && <Work work={resume.work} />}
     {resume.volunteer && <Volunteer volunteer={resume.volunteer} />}
     {resume.education && <Education education={resume.education} />}
     {resume.awards && <Awards awards={resume.awards} />}
