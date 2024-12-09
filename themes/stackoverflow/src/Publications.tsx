@@ -1,6 +1,7 @@
 import { Publication } from './types';
 import { DMY } from './dateHelpers';
 import { withTranslation, WithTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 export const Publications = withTranslation()(
   ({ publications, t }: { publications: Publication[] } & WithTranslation) =>
@@ -17,7 +18,9 @@ export const Publications = withTranslation()(
               )}
               <header className="clear">
                 {publication.releaseDate && (
-                  <span className="date">{DMY(publication.releaseDate)}</span>
+                  <span className="date">
+                    {DMY(publication.releaseDate, i18n.language)}
+                  </span>
                 )}
                 <div className="header-left">
                   {publication.name && (

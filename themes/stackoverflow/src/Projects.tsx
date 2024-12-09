@@ -1,6 +1,7 @@
 import { Project } from './types';
 import { MY } from './dateHelpers';
 import { withTranslation, WithTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 export const Projects = withTranslation()(
   ({ projects, t }: { projects: Project[] } & WithTranslation) => (
@@ -25,13 +26,13 @@ export const Projects = withTranslation()(
                       <div className="date">
                         {project.startDate && (
                           <span className="startDate">
-                            {MY(project.startDate)}
+                            {MY(project.startDate, i18n.language)}
                             {'\u00A0'}
                           </span>
                         )}
                         {project.endDate ? (
                           <span className="endDate">
-                            - {MY(project.endDate)}
+                            - {MY(project.endDate, i18n.language)}
                           </span>
                         ) : (
                           <span className="endDate">- Current</span>

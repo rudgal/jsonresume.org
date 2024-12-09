@@ -1,6 +1,7 @@
 import { Work as WorkItem } from './types';
 import { MY } from './dateHelpers';
 import { withTranslation, WithTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 export const Work = withTranslation()(
   ({ work, t }: { work: WorkItem[] } & WithTranslation) =>
@@ -23,13 +24,13 @@ export const Work = withTranslation()(
                     <div className="date">
                       {workItem.startDate && (
                         <span className="startDate">
-                          {MY(workItem.startDate)}
+                          {MY(workItem.startDate, i18n.language)}
                           {'\u00A0'}
                         </span>
                       )}
                       {workItem.endDate ? (
                         <span className="endDate">
-                          - {MY(workItem.endDate)}
+                          - {MY(workItem.endDate, i18n.language)}
                         </span>
                       ) : (
                         <span className="endDate">- Current</span>
