@@ -379,7 +379,7 @@ section .location {
 }
 
 .highlights {
-  margin: 1em 0 0 0;
+  margin: 0.3em 0 0 0;
 }
 
 .highlights > li > p {
@@ -560,7 +560,7 @@ section .location {
 }
 
 .section > section > section {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /******************
