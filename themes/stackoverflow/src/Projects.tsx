@@ -1,6 +1,7 @@
 import { Project } from './types';
 import { MY } from './dateHelpers';
 import { withTranslation, WithTranslation } from 'react-i18next';
+
 export const Projects = withTranslation()(
   ({ projects, t }: { projects: Project[] } & WithTranslation) => (
     <>
@@ -15,20 +16,19 @@ export const Projects = withTranslation()(
           <section id="projects">
             {projects.map((project, index) => (
               <section className="project-item" key={index}>
-                {project.description && (
-                  <label htmlFor={`project-item-${index}`}></label>
-                )}
                 {project.name && (
-                  <header className="clear">
+                  <>
                     {project.name && (
-                      <div className="position">{project.name}</div>
+                      <label htmlFor={`project-item-${index}`} />
                     )}
-                    {project.startDate && (
+                    <header className="clear">
                       <div className="date">
-                        <span className="startDate">
-                          {MY(project.startDate)}
-                          {'\u00A0'}
-                        </span>
+                        {project.startDate && (
+                          <span className="startDate">
+                            {MY(project.startDate)}
+                            {'\u00A0'}
+                          </span>
+                        )}
                         {project.endDate ? (
                           <span className="endDate">
                             - {MY(project.endDate)}
@@ -37,8 +37,12 @@ export const Projects = withTranslation()(
                           <span className="endDate">- Current</span>
                         )}
                       </div>
-                    )}
-                  </header>
+                      {project.name && (
+                        <div className="position">{project.name}</div>
+                      )}
+                      <div className="company">{project.entity}</div>
+                    </header>
+                  </>
                 )}
 
                 {project.url && (
