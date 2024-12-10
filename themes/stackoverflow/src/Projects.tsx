@@ -41,7 +41,9 @@ export const Projects = withTranslation()(
                       {project.name && (
                         <div className="position">{project.name}</div>
                       )}
-                      <div className="company">{project.entity}</div>
+                      {project.entity && (
+                        <div className="company">{project.entity}</div>
+                      )}
                     </header>
                   </>
                 )}
